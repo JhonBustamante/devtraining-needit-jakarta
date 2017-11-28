@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element label="Cuando lo necesita" mandatory="true" max_length="40" name="u_cuando_necesita" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="Legal1" label="Qué necesita" mandatory="true" max_length="40" name="u_que_necesita" type="string">
+            <choice>
+                <element label="Recursos humanos 1" sequence="0" value="hr1"/>
+                <element label="Recursos humanos 2" sequence="1" value="hr2"/>
+                <element label="Instalaciones 1" sequence="2" value="Instalaciones1"/>
+                <element label="Instalaciones 2" sequence="3" value="Instalaciones2"/>
+                <element label="Legal 1" sequence="4" value="Legal1"/>
+                <element label="Legal 2" sequence="5" value="Legal2"/>
+                <element label="Elija su departamento 1" sequence="6" value="Elija_departamento1"/>
+                <element label="Elija su departamento 2" sequence="7" value="Elija_departamento2"/>
+            </choice>
+        </element>
+        <element label="Solicitado por" mandatory="true" max_length="32" name="u_solictiado_por" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="Legal" label="Tipo de solicitud" mandatory="true" max_length="40" name="u_tipo_solicitud" type="string">
+            <choice>
+                <element label="Recursos humanos" sequence="0" value="hr"/>
+                <element label="Instalaciones" sequence="1" value="Instalaciones"/>
+                <element label="Legal" sequence="2" value="Legal"/>
+                <element label="Elija su departamento" sequence="3" value="Elija_departamento"/>
+            </choice>
+        </element>
+    </element>
+</database>
